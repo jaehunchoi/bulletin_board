@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Notice Board</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Notice Board</h3>
+    <!-- <form class="form-inline"> -->
+    <form id="search_board"class="form-horizontal">
+      <div class="form-group">
+        <select name="유형" id = "select_option">
+          <option value="recent">최신순</option>
+          <option value="title">제목</option>
+          <option value="content">내용</option>
+          <option value="writer">작성자</option>
+        </select>
+
+        <label for="search" class="col-sm-2 control-label">Title</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="search" placeholder="Search">
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" id="search_btn">검색</button>
+        </div>
+      </div>  
+    </form>
+    <form id="create_board"class="form-horizontal">
+      <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Title</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="title" placeholder="Title">
+         </div>
+      </div>
+      <div class="form-group">
+        <label for="content" class="col-sm-2 control-label">Content</label>
+        <div class="col-sm-10">
+          <input type="texterea" class="form-control" id="content" placeholder="Content">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="writer" class="col-sm-2 control-label">Writer</label>
+        <div class="col-sm-10">
+          <input type="writer" class="form-control" id="writer" placeholder="Writer">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" id="action_btn">Send</button>
+        </div>
+      </div>
+    </form>
+    <textarea id="content_from_server">
+    </textarea>
+    <ul id="board_list">
+    </ul>
+    <ul id="chat"></ul>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type = "text/javascript" src="index.js"></script>
+
+</body>
+</html>
